@@ -1,0 +1,68 @@
+<div class="row mt-4 w-100">
+    <div class="col-lg-4 offset-lg-4">
+        <h2 class="titulo">Calculadora BMI</h2>
+        <div class="row">
+            <div class="col-lg-6 ">
+                <div [ngClass]="{'seleccionado': sexo==='m'}" class="fondoItem" (click)="sexo='m'">
+                    <div class="contenedor contenedor-sexo">
+                        <i class="fas fa-mars sexo"></i>
+                        <p class="">Maculino</p>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div [ngClass]="{'seleccionado': sexo ==='f'}" class="fondoItem" (click)="sexo='f'">
+                    <div class="contenedor contenedor-sexo">
+                        <i class="fas fa-venus sexo"></i>
+                        <p class="">Femenino</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="fondoItem">
+                    <div class="contenedor">
+                        <p>Altura</p>
+                        <div class="estiloNumero">{{altura}}<span class="cm">CM</span></div>
+                        <input type="range" class="form-range" min="50" max="300" step="1" [(ngModel)]="altura">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="fondoItem">
+                    <div class="contenedor">
+                        <p>Peso</p>
+                        <div class="estiloNumero">{{peso}}</div>
+                        <div>
+                            <i class="fas fa-minus" (click)="peso>1 ? peso=peso-1 :''"></i>
+                            <i class="fas fa-plus" (click)="peso=peso+1"></i>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="fondoItem">
+                    <div class="contenedor">
+                        <p>Edad</p>
+                        <div class="estiloNumero">{{edad}}</div>
+                        <div>
+                            <i class="fas fa-minus" (click)=" edad>1 ? edad=edad-1 :'' "></i>
+                            <i class="fas fa-plus" (click)=" edad<99 ? edad=edad+1 :'' "></i>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+                <button (click)="calcularBMI()" class="btn btnColor btn-primary btn-lg" type="button">Calcular</button>
+        </div>
+    </div>
+</div>
+
+

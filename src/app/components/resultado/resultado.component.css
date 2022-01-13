@@ -1,0 +1,21 @@
+.fondoItem{
+    background-color: #ff111328;
+    border-radius: 15px;
+    color: white;
+    height: 430px;
+}
+
+.resultado{
+    color: #12BD45;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.numero{
+    font-size: 80px;
+    font-weight: 700;
+    
+}
+.interpretacion{
+
+}
